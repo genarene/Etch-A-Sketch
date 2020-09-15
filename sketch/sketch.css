@@ -1,5 +1,38 @@
+body {
+  background-image: linear-gradient(
+    109.6deg,
+    rgba(5, 84, 94, 1) 16%,
+    #bbb 91.1%
+  );
+}
 #main {
   display: grid;
-  grid-template-columns: repeat(auto-fill, 100px);
-  grid-template-rows: repeat(auto-fill, 100px);
+  /* text-align: center;
+  justify-content: center; */
+  grid-template-columns: repeat(auto-fill, 250px);
+  grid-template-rows: repeat(auto-fill, 250px);
+  grid-gap: 20px 40px;
+  padding: 20px;
+}
+
+#btn {
+  padding: 15px 32px;
+  text-align: center;
+
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  background-color: greenyellow;
+  color: black;
+
+  border-radius: 12px;
+  transition-duration: 0.4s;
+}
+
+#btn:hover {
+  box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24),
+    0 17px 50px 0 rgba(0, 0, 0, 0.19);
+  background-color: cyan;
+  color: black;
 }
