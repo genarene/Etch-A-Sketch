@@ -7,14 +7,17 @@
     <link rel="stylesheet" type="text/css" href="./sketch.css" />
   </head>
   <body>
-    <button id="btn">click me</button>
+    <div class="buttons">
+      <button class="btn" id="btn">click here to sketch</button>
+      <button class="btn" id="clear">Clear</button>
+    </div>
+
     <div id="main"></div>
 
     <script>
       const main = document.querySelector("#main");
 
       const btn = document.querySelector("#btn");
-      // btn.style.cssText = "background-color:cyan";
 
       const userInput = () => {
         const user = prompt("enter num of cells");
@@ -35,13 +38,13 @@
           div.innerHTML = c + 1;
 
           div.addEventListener("mouseover", function () {
-            div.style.cssText = "background-color:greenyellow";
+            div.style.cssText = "background-color:cyan";
             div.style.padding = "50%";
             div.style.border = "1px solid ";
           });
 
           div.addEventListener("mouseout", function () {
-            div.style.cssText = "background-color: cyan";
+            div.style.cssText = "background-color:greenyellow";
             div.style.padding = "50%";
             div.style.border = "1px solid ";
           });
@@ -50,6 +53,11 @@
         }
       };
       generateGrid(userInput);
+
+      const clear = document.getElementById("clear");
+      clear.addEventListener("click", () => {
+        window.location.reload();
+      });
     </script>
   </body>
 </html>
